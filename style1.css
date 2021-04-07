@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  margin-top: 20px;
+}
+
+.registration-form {
+  width: 40%;
+  padding: 30px 20px;
+  border: 1px solid #000;
+  margin-top: 50px;
+}
+
+.form-control {
+  width: 100%;
+  background-color: cornsilk;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 20px;
+  /* overflow: hidden; */
+}
+
+.form-control input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding-top: 20px;
+  padding-left: 5px;
+  outline: none;
+  font-family: inherit;
+}
+
+.form-control label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid #000;
+}
+
+.form-control i {
+  visibility: hidden;
+  opacity: 0;
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transform: translateY(50%);
+  transition: visibility opacity 0.3s ease;
+}
+
+.error-message {
+  position: absolute;
+  display: block;
+  left: 0;
+}
+
+.form-control.success .fa-check-circle {
+  visibility: visible;
+  opacity: 1;
+  color: lightgreen;
+}
+
+.form-control.success label::after {
+  border-bottom-color: lightgreen;
+}
+
+.form-control.error .fa-times-circle {
+  visibility: visible;
+  opacity: 1;
+  color: rgb(212, 80, 80);
+}
+
+.form-control.error label::after {
+  border-bottom-color: rgb(212, 80, 80);
+}
+
+.form-control label::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 100%;
+  border-bottom: 3px solid #000;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.label-content {
+  position: absolute;
+  bottom: 5px;
+  padding-left: 5px;
+  transition: all 0.3s ease;
+}
+
+.form-control input:focus + .label-name .label-content,
+.form-control input:valid + .label-name .label-content {
+  transform: translateY(-100%);
+  font-size: 14px;
+  color: rgb(77, 204, 247);
+}
+
+.form-control input:focus + .label-name::after,
+.form-control input:valid + .label-name::after {
+  transform: translateX(0%);
+}
+
+.registration-form button {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #000;
+  background-color: antiquewhite;
+  border: 2px solid rgb(250, 226, 195);
+  border-radius: 4px;
+  font-family: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.registration-form button:hover {
+  background-color: rgb(250, 213, 165);
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input 1 Animations - Form validation</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style1.css" />
+  </head>
+  <body>
+    <h1>Input Animation - Form Validation</h1>
+    <form class="registration-form">
+      <div class="form-control">
+        <input
+          id="fname"
+          type="text"
+          name="fname"
+          required
+          autocomplete="off"
+        />
+        <label class="label-name">
+          <span class="label-content">First Name</span>
+        </label>
+        <span class="error-message">This input is required</span>
+        <i class="fas fa-check-circle"></i>
+        <i class="fas fa-times-circle"></i>
+      </div>
+      <div class="form-control">
+        <input
+          id="lname"
+          type="text"
+          name="lname"
+          required
+          autocomplete="off"
+        />
+        <label class="label-name">
+          <span class="label-content">Last Name</span>
+        </label>
+        <i class="fas fa-check-circle"></i>
+        <i class="fas fa-times-circle"></i>
+      </div>
+      <div class="form-control">
+        <input
+          id="email"
+          type="email"
+          name="email"
+          required
+          autocomplete="off"
+        />
+        <label class="label-name">
+          <span class="label-content">Email</span>
+        </label>
+        <i class="fas fa-check-circle"></i>
+        <i class="fas fa-times-circle"></i>
+      </div>
+      <div class="form-control">
+        <input
+          id="password1"
+          type="password"
+          name="password1"
+          required
+          autocomplete="off"
+        />
+        <label class="label-name">
+          <span class="label-content">Password</span>
+        </label>
+        <i class="fas fa-check-circle"></i>
+        <i class="fas fa-times-circle"></i>
+      </div>
+      <div class="form-control">
+        <input
+          id="password2"
+          type="password"
+          name="password2"
+          required
+          autocomplete="off"
+        />
+        <label class="label-name">
+          <span class="label-content">Repeat Password</span>
+        </label>
+        <i class="fas fa-check-circle"></i>
+        <i class="fas fa-times-circle"></i>
+      </div>
+
+      <button>Submit</button>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>
